@@ -10,7 +10,7 @@ const About: React.FunctionComponent<IAboutProps> = (props) => {
     <Container>
       <section id="about" className="md:flex px-8 md:px-16 py-16 items-center">
         <div className="md:flex-1/2 space-y-7">
-          <h2 className="text-sm uppercase text-gray-500">About Me</h2>
+          <h2 className="uppercase text-gray-500">About Me</h2>
           <div>
             <h2 className="text-2xl">More Than Just Code</h2>
             <p>Here's what I do:</p>
