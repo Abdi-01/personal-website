@@ -5,9 +5,7 @@ interface IContainerProps {
 }
 
 const Container: React.FunctionComponent<IContainerProps> = ({ children }) => {
-  return (
-    <main className="container m-auto px-8 sm:px-16 2xl:px-0">{children}</main>
-  );
+  return <main className="container m-auto sm:px-16 2xl:px-0">{children}</main>;
 };
 
 export default Container;

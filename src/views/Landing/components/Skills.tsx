@@ -61,9 +61,9 @@ const Skills: React.FunctionComponent<ISkillsProps> = (props) => {
       <h2 className="text-center text-sm uppercase text-gray-500">
         Things I Build & Teach
       </h2>
-      <div className="flex items-center justify-center flex-wrap py-5">
+      <div className="flex items-center justify-center gap-10 flex-wrap py-5">
         {logo.map((e: ILogo) => (
-          <div key={e.alt} className="relative w-10 md:w-16 h-10 md:h-16">
+          <div key={e.alt} className="relative w-8 md:w-10 h-8 md:h-10">
             <Image
               src={e.imgUrl}
               alt={e.alt}

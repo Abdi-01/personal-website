@@ -4,6 +4,8 @@ import Hero from "./components/Hero";
 import Container from "@/components/core/Container";
 import Skills from "./components/Skills";
 import About from "./components/About";
+import Portfolio from "./components/Portfolio";
+import AlumniCareer from "./components/AlumniCareer";
 
 interface ILandingPageProps {}
 
@@ -18,6 +20,8 @@ const LandingPage: React.FunctionComponent<ILandingPageProps> = (props) => {
       </div>
       <Skills />
       <About />
+      <Portfolio />
+      <AlumniCareer />
     </div>
   );
 };
