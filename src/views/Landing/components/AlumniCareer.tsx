@@ -15,7 +15,10 @@ interface IAlumniCareerProps {}
 const AlumniCareer: React.FunctionComponent<IAlumniCareerProps> = (props) => {
   return (
     <Container>
-      <section id="alumniCareer" className="space-y-7 px-6 md:px-16 py-16">
+      <section
+        id="alumniCareer"
+        className="space-y-7 px-6 md:px-16 py-10 md:py-16"
+      >
         <div>
           <h2 className="text-center uppercase text-gray-500">
             From Learning to Earning
@@ -25,8 +28,8 @@ const AlumniCareer: React.FunctionComponent<IAlumniCareerProps> = (props) => {
             Here's what they've been up to.
           </p>
         </div>
-        <div className="flex justify-evenly">
-          <Card>
+        <div className="flex flex-col md:flex-row gap-5">
+          <Card className="md:flex-1/3">
             <CardContent className="flex gap-4">
               <Image
                 src="https://avatar.iran.liara.run/public"
@@ -40,7 +43,7 @@ const AlumniCareer: React.FunctionComponent<IAlumniCareerProps> = (props) => {
               </div>
             </CardContent>
           </Card>
-          <Card>
+          <Card className="md:flex-1/3">
             <CardContent className="flex gap-4">
               <Image
                 src="https://avatar.iran.liara.run/public"
@@ -54,7 +57,7 @@ const AlumniCareer: React.FunctionComponent<IAlumniCareerProps> = (props) => {
               </div>
             </CardContent>
           </Card>
-          <Card>
+          <Card className="md:flex-1/3">
             <CardContent className="flex gap-4">
               <Image
                 src="https://avatar.iran.liara.run/public"

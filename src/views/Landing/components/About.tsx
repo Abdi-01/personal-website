@@ -17,7 +17,7 @@ const About: React.FunctionComponent<IAboutProps> = (props) => {
           </div>
           <div className="md:grid grid-cols-2 grid-rows-2 gap-4 py-4 space-y-5 md:space-y-0">
             <div>
-              <BookOpen size={50} />
+              <BookOpen className="w-10 md:w-16 h-10 md:h-16" />
               <h3 className="text-xl font-bold">Teaching is My Main Gig</h3>
               <p className="text-sm font-light">
                 I spend most of my time helping aspiring developers learn
@@ -26,7 +26,7 @@ const About: React.FunctionComponent<IAboutProps> = (props) => {
               </p>
             </div>
             <div>
-              <Laptop size={50} />
+              <Laptop className="w-10 md:w-16 h-10 md:h-16" />
               <h3 className="text-xl font-bold">Building Apps on Request</h3>
               <p className="text-sm font-light">
                 Outside of teaching, I take on web development projects, turning
@@ -34,7 +34,7 @@ const About: React.FunctionComponent<IAboutProps> = (props) => {
               </p>
             </div>
             <div>
-              <RocketIcon size={50} />
+              <RocketIcon className="w-10 md:w-16 h-10 md:h-16" />
               <h3 className="text-xl font-bold">
                 Making Tech Less Intimidating
               </h3>
@@ -44,7 +44,7 @@ const About: React.FunctionComponent<IAboutProps> = (props) => {
               </p>
             </div>
             <div>
-              <LucideHandshake size={50} />
+              <LucideHandshake className="w-10 md:w-16 h-10 md:h-16" />
               <h3 className="text-xl font-bold">
                 Let's Learn & Build Together
               </h3>

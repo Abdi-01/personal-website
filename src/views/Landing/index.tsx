@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import AlumniCareer from "./components/AlumniCareer";
+import Articles from "./components/Articles";
 
 interface ILandingPageProps {}
 
@@ -22,6 +23,7 @@ const LandingPage: React.FunctionComponent<ILandingPageProps> = (props) => {
       <About />
       <Portfolio />
       <AlumniCareer />
+      <Articles />
     </div>
   );
 };

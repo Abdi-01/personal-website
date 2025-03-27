@@ -17,7 +17,10 @@ interface IPortfolioProps {}
 const Portfolio: React.FunctionComponent<IPortfolioProps> = (props) => {
   return (
     <Container>
-      <section id="portfolio" className="space-y-7 px-6 md:px-16 py-16">
+      <section
+        id="portfolio"
+        className="space-y-7 px-6 md:px-16 py-10 md:py-16"
+      >
         <h2 className="text-center uppercase text-gray-500">My Projects</h2>
         <div className="flex flex-wrap md:flex-nowrap md:gap-4">
           <Card className="md:w-2/3 cursor-pointer">
