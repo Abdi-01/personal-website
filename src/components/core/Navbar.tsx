@@ -29,16 +29,27 @@ const Navbar: React.FunctionComponent<INavbarProps> = (props) => {
       </div>
       <NavigationMenu>
         <NavigationMenuList>
-          <NavigationMenuLink>Home</NavigationMenuLink>
-          <NavigationMenuLink>About</NavigationMenuLink>
-          <NavigationMenuLink>Skills</NavigationMenuLink>
-          <NavigationMenuLink>Portfolio</NavigationMenuLink>
-          <NavigationMenuItem>
+          <NavigationMenuLink className="cursor-pointer">
+            Home
+          </NavigationMenuLink>
+          <NavigationMenuLink className="cursor-pointer">
+            About
+          </NavigationMenuLink>
+          <NavigationMenuLink className="cursor-pointer">
+            Skills
+          </NavigationMenuLink>
+          <NavigationMenuLink className="cursor-pointer">
+            Portfolio
+          </NavigationMenuLink>
+          <NavigationMenuLink className="cursor-pointer" href="/blog">
+            Blogs
+          </NavigationMenuLink>
+          {/* <NavigationMenuItem>
             <NavigationMenuTrigger>Articles</NavigationMenuTrigger>
             <NavigationMenuContent>
               <NavigationMenuLink>Link</NavigationMenuLink>
             </NavigationMenuContent>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
         </NavigationMenuList>
       </NavigationMenu>
     </Container>

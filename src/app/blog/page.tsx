@@ -1,5 +1,5 @@
-import BlogPage from "@/views/Blog";
 import * as React from "react";
+import BlogPage from "@/views/Blog";
 
 interface IBlogProps {}
 
