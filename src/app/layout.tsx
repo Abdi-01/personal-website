@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/core/Navbar";
-import Image from "next/image";
-import Container from "@/components/core/Container";
 import Footer from "@/components/core/Footer";
 
 const geistSans = Geist({
@@ -18,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Introducing Me",
-  description: "Abdi's personal website",
+  description: "Abdi&apos;s personal website",
 };
 
 export default function RootLayout({

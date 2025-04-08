@@ -1,14 +1,12 @@
-import Image from "next/image";
 import * as React from "react";
-
-interface ISkillsProps {}
+import Image from "next/image";
 
 interface ILogo {
   alt: string;
   imgUrl: string;
 }
 
-const Skills: React.FunctionComponent<ISkillsProps> = (props) => {
+const Skills = () => {
   const logo: ILogo[] = [
     {
       alt: "js",

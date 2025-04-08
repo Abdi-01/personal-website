@@ -2,20 +2,13 @@ import * as React from "react";
 import { Button } from "../ui/button";
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { PhoneIcon } from "lucide-react";
 import Container from "./Container";
 
-interface INavbarProps {}
-
-const Navbar: React.FunctionComponent<INavbarProps> = (props) => {
+const Navbar = () => {
   return (
     <Container>
       <div className="flex justify-between pt-5 px-3 pb-0">

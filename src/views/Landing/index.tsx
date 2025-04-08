@@ -1,16 +1,11 @@
-import Image from "next/image";
-import * as React from "react";
 import Hero from "./components/Hero";
-import Container from "@/components/core/Container";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import AlumniCareer from "./components/AlumniCareer";
 import Articles from "./components/Articles";
 
-interface ILandingPageProps {}
-
-const LandingPage: React.FunctionComponent<ILandingPageProps> = (props) => {
+const LandingPage = () => {
   return (
     <div>
       <div className="w-full flex items-center py-36 md:py-56">

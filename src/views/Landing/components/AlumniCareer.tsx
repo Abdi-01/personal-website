@@ -1,18 +1,9 @@
 import * as React from "react";
 import Container from "@/components/core/Container";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
-interface IAlumniCareerProps {}
-
-const AlumniCareer: React.FunctionComponent<IAlumniCareerProps> = (props) => {
+const AlumniCareer = () => {
   return (
     <Container>
       <section
@@ -25,7 +16,7 @@ const AlumniCareer: React.FunctionComponent<IAlumniCareerProps> = (props) => {
           </h2>
           <p className="text-center text-sm">
             Watching my students grow and land amazing jobs is the best feeling!
-            Here's what they've been up to.
+            Here&apos;s what they&apos;ve been up to.
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-5">

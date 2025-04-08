@@ -1,12 +1,9 @@
-import Image from "next/image";
 import * as React from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
-interface IFooterProps {}
-
-const Footer: React.FunctionComponent<IFooterProps> = (props) => {
+const Footer = () => {
   return (
     <footer className="flex flex-wrap items-start justify-evenly p-16">
       <div>

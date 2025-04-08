@@ -3,18 +3,13 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { LucideExternalLink } from "lucide-react";
 import Container from "@/components/core/Container";
 
-interface IPortfolioProps {}
-
-const Portfolio: React.FunctionComponent<IPortfolioProps> = (props) => {
+const Portfolio = () => {
   return (
     <Container>
       <section

@@ -1,9 +1,6 @@
-import Container from "@/components/core/Container";
 import * as React from "react";
 
-interface IHeroProps {}
-
-const Hero: React.FunctionComponent<IHeroProps> = (props) => {
+const Hero = () => {
   return (
     <section id="hero" className="space-y-7 p-4">
       <p className="text-sm uppercase text-gray-500">

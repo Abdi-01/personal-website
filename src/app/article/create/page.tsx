@@ -13,9 +13,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+import { Editor } from "@tinymce/tinymce-react";
+import type { Editor as TinyMCEEditor } from "tinymce"; // Import tipe dari TinyMCE
+
 const PostPage: React.FunctionComponent = () => {
   const router = useRouter();
-  const articleFormRef = React.useRef<any>(null);
+  const articleFormRef = React.useRef<TinyMCEEditor | null>(null);
   const articleTitleRef = React.useRef<HTMLInputElement>(null);
   const articleThumbnailRef = React.useRef<HTMLInputElement>(null);
   const articleCategoryRef = React.useRef<string | null>(null);
@@ -43,7 +46,7 @@ const PostPage: React.FunctionComponent = () => {
   }, []);
 
   const printPostsList = () => {
-    return postsList.map((val: any, idx: number) => {
+    return postsList.map((val: any) => {
       return (
         <div
           key={val.objectId}
@@ -88,19 +91,13 @@ const PostPage: React.FunctionComponent = () => {
         });
         const accountId = localStorage.getItem("tkn");
         const articleId = response.data.objectId;
-        const resAccountToArticle = await callAPI.put(
-          `/accounts/${accountId}/articleList`,
-          {
-            objectIds: articleId,
-          }
-        );
+        await callAPI.put(`/accounts/${accountId}/articleList`, {
+          objectIds: articleId,
+        });
         // kolom relasi table todos ke account
-        const resTodoToAccount = await callAPI.put(
-          `/articles/${articleId}/accountData`,
-          {
-            objectIds: accountId,
-          }
-        );
+        await callAPI.put(`/articles/${articleId}/accountData`, {
+          objectIds: accountId,
+        });
         alert("Tambah data article berhasil");
         getArticlesList();
       } else {

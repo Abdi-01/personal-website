@@ -3,9 +3,8 @@ import { BookOpen, Laptop, LucideHandshake, RocketIcon } from "lucide-react";
 import Photo from "../../../../public/assets/abdi.jpg";
 import Image from "next/image";
 import Container from "@/components/core/Container";
-interface IAboutProps {}
 
-const About: React.FunctionComponent<IAboutProps> = (props) => {
+const About = () => {
   return (
     <Container>
       <section id="about" className="md:flex px-8 md:px-16 py-16 items-center">
@@ -13,7 +12,7 @@ const About: React.FunctionComponent<IAboutProps> = (props) => {
           <h2 className="uppercase text-gray-500">About Me</h2>
           <div>
             <h2 className="text-2xl">More Than Just Code</h2>
-            <p>Here's what I do:</p>
+            <p>Here&apos;s what I do:</p>
           </div>
           <div className="md:grid grid-cols-2 grid-rows-2 gap-4 py-4 space-y-5 md:space-y-0">
             <div>
@@ -46,7 +45,7 @@ const About: React.FunctionComponent<IAboutProps> = (props) => {
             <div>
               <LucideHandshake className="w-10 md:w-16 h-10 md:h-16" />
               <h3 className="text-xl font-bold">
-                Let's Learn & Build Together
+                Let&apos;s Learn & Build Together
               </h3>
               <p className="text-sm font-light">
                 Need guidance in coding or a custom-built web app? Let’s make it

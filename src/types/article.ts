@@ -1,5 +1,3 @@
-import { User } from "./user";
-
 export interface IArticle {
   objectId: string;
   title: string;

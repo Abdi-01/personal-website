@@ -10,11 +10,9 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { IArticle } from "@/types/article";
 
 // Dummy data
 const dummyArticles = [
