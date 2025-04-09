@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 const Articles = () => {
   return (
@@ -68,6 +69,11 @@ const Articles = () => {
             </CardContent>
           </Card>
         </div>
+        <Link href="/blogs">
+          <Button variant="ghost" className="block m-auto">
+            See More
+          </Button>
+        </Link>
       </section>
     </Container>
   );

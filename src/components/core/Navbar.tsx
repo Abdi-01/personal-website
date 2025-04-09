@@ -22,20 +22,23 @@ const Navbar = () => {
       </div>
       <NavigationMenu>
         <NavigationMenuList>
-          <NavigationMenuLink className="cursor-pointer">
+          <NavigationMenuLink href="/" className="cursor-pointer">
             Home
           </NavigationMenuLink>
-          <NavigationMenuLink className="cursor-pointer">
+          <NavigationMenuLink href="/#about" className="cursor-pointer">
             About
           </NavigationMenuLink>
-          <NavigationMenuLink className="cursor-pointer">
+          <NavigationMenuLink href="/#skill" className="cursor-pointer">
             Skills
           </NavigationMenuLink>
-          <NavigationMenuLink className="cursor-pointer">
+          <NavigationMenuLink href="/#alumniCareer" className="cursor-pointer">
+            Alumni Career
+          </NavigationMenuLink>
+          <NavigationMenuLink href="/#portfolio" className="cursor-pointer">
             Portfolio
           </NavigationMenuLink>
-          <NavigationMenuLink className="cursor-pointer" href="/blog">
-            Blogs
+          <NavigationMenuLink href="/#articles" className="cursor-pointer">
+            Articles
           </NavigationMenuLink>
           {/* <NavigationMenuItem>
             <NavigationMenuTrigger>Articles</NavigationMenuTrigger>

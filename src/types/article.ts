@@ -1,3 +1,5 @@
+import { User } from "./user";
+
 export interface IArticle {
   objectId: string;
   title: string;
@@ -9,5 +11,5 @@ export interface IArticle {
   ownerId: string | null;
   created: number;
   updated: number | null;
-  accountData: any;
+  accountData: User;
 }

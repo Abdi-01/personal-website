@@ -13,7 +13,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { Editor } from "@tinymce/tinymce-react";
 import type { Editor as TinyMCEEditor } from "tinymce"; // Import tipe dari TinyMCE
 
 const PostPage: React.FunctionComponent = () => {
@@ -46,7 +45,7 @@ const PostPage: React.FunctionComponent = () => {
   }, []);
 
   const printPostsList = () => {
-    return postsList.map((val: any) => {
+    return postsList.map((val: IArticle) => {
       return (
         <div
           key={val.objectId}

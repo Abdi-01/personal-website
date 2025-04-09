@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import Container from "@/components/core/Container";
+import Locavex from "../../../../public/assets/portfolio/locavex/landing-locavex-id.png";
+import NiasPossi from "../../../../public/assets/portfolio/niaspossi/landing-niaspossi-jatim.png";
 
 const Portfolio = () => {
   return (
@@ -17,19 +19,20 @@ const Portfolio = () => {
         className="space-y-7 px-6 md:px-16 py-10 md:py-16"
       >
         <h2 className="text-center uppercase text-gray-500">My Projects</h2>
-        <div className="flex flex-wrap md:flex-nowrap md:gap-4">
-          <Card className="md:w-2/3 cursor-pointer">
-            <CardHeader>
-              <CardTitle>Timeavenue</CardTitle>
-              <CardDescription>Website jual beli jam tangan</CardDescription>
-            </CardHeader>
-            <CardContent>
+        <div className="flex flex-wrap md:flex-nowrap gap-4">
+          <Card className="md:w-2/3 cursor-pointer md:relative overflow-hidden">
+            <CardContent className="md:flex h-full items-center">
+              <div className="mb-4">
+                <CardTitle className="md:text-5xl uppercase">Locavex</CardTitle>
+                <CardDescription>
+                  Website landing page konveksi kaos
+                </CardDescription>
+              </div>
               <Image
-                src="https://1322024341.rsc.cdn77.org/wp-content/uploads/2022/07/Frame-1680-1.svg"
+                src={Locavex}
                 alt="timeavenue"
-                className="m-auto"
-                width={400}
-                height={200}
+                className="md:absolute top-0 -right-48 hover:-right-0"
+                width={650}
               />
             </CardContent>
           </Card>
@@ -57,7 +60,7 @@ const Portfolio = () => {
             </CardHeader>
             <CardContent>
               <Image
-                src="https://1322024341.rsc.cdn77.org/wp-content/uploads/2022/07/Frame-1680-1.svg"
+                src={NiasPossi}
                 alt="timeavenue"
                 className="m-auto"
                 width={400}
@@ -65,18 +68,19 @@ const Portfolio = () => {
               />
             </CardContent>
           </Card>
-          <Card className="md:w-2/3 cursor-pointer">
-            <CardHeader>
-              <CardTitle>Timeavenue</CardTitle>
-              <CardDescription>Website jual beli jam tangan</CardDescription>
-            </CardHeader>
-            <CardContent>
+          <Card className="md:w-2/3 cursor-pointer md:relative overflow-hidden">
+            <CardContent className="md:flex h-full items-center">
+              <div className="mb-4">
+                <CardTitle className="md:text-5xl uppercase">Locavex</CardTitle>
+                <CardDescription>
+                  Website landing page konveksi kaos
+                </CardDescription>
+              </div>
               <Image
-                src="https://1322024341.rsc.cdn77.org/wp-content/uploads/2022/07/Frame-1680-1.svg"
+                src={Locavex}
                 alt="timeavenue"
-                className="m-auto"
-                width={400}
-                height={200}
+                className="md:absolute top-0 -right-48 hover:-right-0"
+                width={650}
               />
             </CardContent>
           </Card>
