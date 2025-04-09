@@ -31,7 +31,7 @@ const Portfolio = () => {
               <Image
                 src={Locavex}
                 alt="timeavenue"
-                className="md:absolute top-0 -right-48 hover:-right-0"
+                className="md:absolute top-0 -right-48 hover:-right-0 transition-all duration-500 delay-150"
                 width={650}
               />
             </CardContent>
@@ -79,7 +79,7 @@ const Portfolio = () => {
               <Image
                 src={Locavex}
                 alt="timeavenue"
-                className="md:absolute top-0 -right-48 hover:-right-0"
+                className="md:absolute top-0 -right-48 hover:-right-0 transition-all duration-500 delay-1000"
                 width={650}
               />
             </CardContent>
