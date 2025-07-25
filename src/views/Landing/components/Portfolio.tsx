@@ -46,7 +46,7 @@ const Portfolio = () => {
                 src="https://1322024341.rsc.cdn77.org/wp-content/uploads/2022/07/Frame-1680-1.svg"
                 alt="timeavenue"
                 className="m-auto"
-                width={400}
+                width={650}
                 height={200}
               />
             </CardContent>
@@ -63,7 +63,7 @@ const Portfolio = () => {
                 src={NiasPossi}
                 alt="timeavenue"
                 className="m-auto"
-                width={400}
+                width={650}
                 height={200}
               />
             </CardContent>

@@ -19,7 +19,7 @@ const AlumniCareer = () => {
             Here&apos;s what they&apos;ve been up to.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <Card className="md:flex-1/3">
             <CardContent className="flex gap-4">
               <Image
