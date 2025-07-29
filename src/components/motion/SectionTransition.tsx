@@ -18,7 +18,7 @@ export default function AnimatedSection({ children, id }: Props) {
     if (inView) {
       controls.start("visible");
     }
-  }, [controls]);
+  }, [inView]);
 
   const variants = {
     hidden: { opacity: 0, y: 50 },
