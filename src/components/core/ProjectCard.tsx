@@ -26,7 +26,7 @@ const ProjectCard = ({
     <Card
       className={`md:w-${
         isLeft ? "2/3" : "1/3"
-      } h-96 cursor-pointer md:relative overflow-hidden`}
+      } lg:h-96 cursor-pointer md:relative overflow-hidden`}
     >
       {isLeft ? (
         <CardContent className="md:flex h-full items-center">
@@ -37,7 +37,7 @@ const ProjectCard = ({
           <Image
             src={image}
             alt={title}
-            className="md:absolute top-0 -right-48 hover:-right-0 transition-all duration-500 delay-150"
+            className="md:absolute top-0 -right-80 lg:-right-48 hover:-right-0 transition-all duration-500 delay-150"
             width={650}
             height={400}
           />

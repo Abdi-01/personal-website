@@ -12,7 +12,7 @@ const Container: React.FunctionComponent<IContainerProps> = ({
   id,
 }) => {
   return (
-    <main id={id} className="container m-auto sm:px-16 2xl:px-0">
+    <main id={id} className="container m-auto 2xl:px-16">
       <AnimatedSection id={id}>{children}</AnimatedSection>
     </main>
   );

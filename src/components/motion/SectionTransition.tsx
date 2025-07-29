@@ -1,7 +1,7 @@
 // components/AnimatedSection.tsx
 "use client";
 
-import { motion, useAnimation } from "framer-motion";
+import { easeOut, motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -25,7 +25,7 @@ export default function AnimatedSection({ children, id }: Props) {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 1.5, ease: easeOut }, // atau pakai var framer motion default
     },
   };
 
