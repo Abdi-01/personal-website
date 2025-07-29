@@ -38,8 +38,8 @@ const articles = [
 
 const Articles = () => {
   return (
-    <Container>
-      <section id="articles" className="space-y-7 px-6 md:px-16 py-10 md:py-16">
+    <Container id="articles">
+      <section className="space-y-7 px-6 md:px-16 py-10 md:py-16">
         <div>
           <h2 className="text-center uppercase text-gray-500">
             Code, Teach, Explore
