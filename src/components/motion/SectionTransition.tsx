@@ -2,7 +2,7 @@
 "use client";
 
 import { easeOut, motion, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 interface Props {
@@ -18,7 +18,7 @@ export default function AnimatedSection({ children, id }: Props) {
     if (inView) {
       controls.start("visible");
     }
-  }, [inView]);
+  }, [controls]);
 
   const variants = {
     hidden: { opacity: 0, y: 50 },

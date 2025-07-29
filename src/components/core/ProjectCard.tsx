@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import {
   Card,
   CardContent,
@@ -10,7 +10,7 @@ import {
 interface IProjectCardProps {
   title: string;
   description: string;
-  image: any;
+  image: string | StaticImageData;
   layout: string;
 }
 

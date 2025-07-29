@@ -4,11 +4,11 @@ import * as React from "react";
 import { Button } from "../../ui/button";
 import {
   NavigationMenu,
-  NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { PhoneIcon, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Container from "../Container";
+import Link from "next/link";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -37,48 +37,48 @@ const Navbar = () => {
       {/* Desktop Navigation */}
       <NavigationMenu className="hidden md:flex">
         <NavigationMenuList>
-          <NavigationMenuLink href="/" className="cursor-pointer">
+          <Link href="/" className="cursor-pointer">
             Home
-          </NavigationMenuLink>
-          <NavigationMenuLink href="/#about" className="cursor-pointer">
+          </Link>
+          <Link href="/#about" className="cursor-pointer">
             About
-          </NavigationMenuLink>
-          <NavigationMenuLink href="/#skill" className="cursor-pointer">
+          </Link>
+          <Link href="/#skill" className="cursor-pointer">
             Skills
-          </NavigationMenuLink>
-          <NavigationMenuLink href="/#alumniCareer" className="cursor-pointer">
+          </Link>
+          <Link href="/#alumniCareer" className="cursor-pointer">
             Alumni Career
-          </NavigationMenuLink>
-          <NavigationMenuLink href="/#portfolio" className="cursor-pointer">
+          </Link>
+          <Link href="/#portfolio" className="cursor-pointer">
             Portfolio
-          </NavigationMenuLink>
-          <NavigationMenuLink href="/#articles" className="cursor-pointer">
+          </Link>
+          <Link href="/#articles" className="cursor-pointer">
             Articles
-          </NavigationMenuLink>
+          </Link>
         </NavigationMenuList>
       </NavigationMenu>
 
       {/* Mobile Navigation Drawer */}
       {mobileOpen && (
         <div className="md:hidden px-4 py-2 space-y-3">
-          <a href="/" className="block text-sm font-medium">
+          <Link href="/" className="block text-sm font-medium">
             Home
-          </a>
-          <a href="/#about" className="block text-sm font-medium">
+          </Link>
+          <Link href="/#about" className="block text-sm font-medium">
             About
-          </a>
-          <a href="/#skill" className="block text-sm font-medium">
+          </Link>
+          <Link href="/#skill" className="block text-sm font-medium">
             Skills
-          </a>
-          <a href="/#alumniCareer" className="block text-sm font-medium">
+          </Link>
+          <Link href="/#alumniCareer" className="block text-sm font-medium">
             Alumni Career
-          </a>
-          <a href="/#portfolio" className="block text-sm font-medium">
+          </Link>
+          <Link href="/#portfolio" className="block text-sm font-medium">
             Portfolio
-          </a>
-          <a href="/#articles" className="block text-sm font-medium">
+          </Link>
+          <Link href="/#articles" className="block text-sm font-medium">
             Articles
-          </a>
+          </Link>
         </div>
       )}
     </Container>

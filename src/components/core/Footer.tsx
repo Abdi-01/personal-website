@@ -4,6 +4,7 @@ import * as React from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { FiFacebook, FiInstagram, FiLinkedin, FiYoutube } from "react-icons/fi";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -34,29 +35,29 @@ const Footer = () => {
           <h2 className="text-lg font-semibold">Pages</h2>
           <ul className="space-y-1 text-sm">
             <li>
-              <a href="/#about" className="hover:underline">
+              <Link href="/#about" className="hover:underline">
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#skill" className="hover:underline">
+              <Link href="/#skill" className="hover:underline">
                 Skills
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#portfolio" className="hover:underline">
+              <Link href="/#portfolio" className="hover:underline">
                 Portfolio
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#alumniCareer" className="hover:underline">
+              <Link href="/#alumniCareer" className="hover:underline">
                 Alumni Career
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#articles" className="hover:underline">
+              <Link href="/#articles" className="hover:underline">
                 Articles
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -65,18 +66,18 @@ const Footer = () => {
         <div className="space-y-2">
           <h2 className="text-lg font-semibold">Social</h2>
           <div className="flex items-center gap-4 text-gray-600">
-            <a href="#" className="hover:text-blue-600">
+            <Link href="#" className="hover:text-blue-600">
               <FiFacebook size={20} />
-            </a>
-            <a href="#" className="hover:text-pink-500">
+            </Link>
+            <Link href="#" className="hover:text-pink-500">
               <FiInstagram size={20} />
-            </a>
-            <a href="#" className="hover:text-blue-500">
+            </Link>
+            <Link href="#" className="hover:text-blue-500">
               <FiLinkedin size={20} />
-            </a>
-            <a href="#" className="hover:text-red-500">
+            </Link>
+            <Link href="#" className="hover:text-red-500">
               <FiYoutube size={20} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

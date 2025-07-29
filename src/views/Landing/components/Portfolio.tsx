@@ -1,15 +1,4 @@
-import * as React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import Image from "next/image";
 import Container from "@/components/core/Container";
-import Locavex from "../../../../public/assets/portfolio/locavex/landing-locavex-id.png";
-import NiasPossi from "../../../../public/assets/portfolio/niaspossi/landing-niaspossi-jatim.png";
 import { projects } from "@/lib/data/sample";
 import ProjectCard from "@/components/core/ProjectCard";
 

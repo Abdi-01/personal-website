@@ -1,5 +1,4 @@
 import * as React from "react";
-import Transition from "../motion/Transition";
 import AnimatedSection from "../motion/SectionTransition";
 
 interface IContainerProps {
