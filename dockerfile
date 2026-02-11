@@ -5,8 +5,11 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
+# Fix common alpine native build issues
+RUN apk add --no-cache libc6-compat python3 make g++
+
 # Install deps
-COPY package*.json ./
+COPY package.json package-lock.json ./
 RUN npm install
 
 # Copy source
