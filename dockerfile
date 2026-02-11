@@ -1,48 +1,14 @@
-# =========================
-# 1️⃣ Builder
-# =========================
-FROM node:20-alpine AS builder
+FROM node:20-alpine
 
 WORKDIR /app
 
-# Install deps
-COPY package.json package-lock.json ./
-RUN npm ci
+# Copy standalone server
+COPY .next/standalone ./
 
-# Copy source
-COPY . .
-
-# Inject build-time env (important!)
-ARG NEXT_PUBLIC_API_URL
-ARG NEXT_PUBLIC_RTE_TINYMCE_KEY
-
-ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
-ENV NEXT_PUBLIC_RTE_TINYMCE_KEY=$NEXT_PUBLIC_RTE_TINYMCE_KEY
-
-# Build
-RUN npm run build
-
-
-# =========================
-# 2️⃣ Runner
-# =========================
-FROM node:20-alpine AS runner
-
-WORKDIR /app
-ENV NODE_ENV=production
-
-# Security: non-root user
-RUN addgroup -S nodejs && adduser -S nextjs -G nodejs
-
-# Copy standalone build
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
-
-USER nextjs
+# Copy static files
+COPY .next/static ./.next/static
+COPY public ./public
 
 EXPOSE 3000
-ENV PORT=3000
-ENV HOSTNAME=0.0.0.0
 
 CMD ["node", "server.js"]
