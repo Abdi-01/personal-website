@@ -10,7 +10,7 @@ RUN apk add --no-cache libc6-compat python3 make g++
 
 # Install deps
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
 # Copy source
 COPY . .
