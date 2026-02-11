@@ -9,7 +9,7 @@ WORKDIR /app
 RUN apk add --no-cache libc6-compat python3 make g++
 
 # Install deps
-COPY package.json package-lock.json ./
+COPY package*.json ./
 RUN npm install
 
 # Copy source
