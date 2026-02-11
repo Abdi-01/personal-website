@@ -7,8 +7,6 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: abdi-01/personal-website
-  NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
-  NEXT_PUBLIC_RTE_TINYMCE_KEY: ${{ secrets.NEXT_PUBLIC_RTE_TINYMCE_KEY }}
 
 jobs:
   build-and-deploy:
@@ -36,6 +34,9 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          build-args: |
+            NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}
+            NEXT_PUBLIC_RTE_TINYMCE_KEY=${{ secrets.NEXT_PUBLIC_RTE_TINYMCE_KEY }}
 
       - name: Trigger Coolify Deploy
         run: |
