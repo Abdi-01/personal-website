@@ -16,6 +16,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }} 
           script: |
+            git config --global --add safe.directory ${{ secrets.SSH_PROJECT }}
             cd ${{ secrets.SSH_PROJECT }} 
             git pull origin main 
             npm install 
