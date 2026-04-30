@@ -19,6 +19,7 @@ jobs:
           script: |
             git config --global --add safe.directory /home/${{ secrets.SSH_USER }}/${{ secrets.SSH_PROJECT }}
             cd ${{ secrets.SSH_PROJECT }} 
+            pm2 stop 0
             git pull origin main 
             npm install 
             npm run build 
