@@ -1,26 +1,45 @@
 name: Deploy to VPS
+
 on:
   push:
     branches:
       - main
-      
+
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v0.1.10 
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install & Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Copy build to VPS
+        uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_KEY }} 
+          key: ${{ secrets.SSH_KEY }}
+          source: ".next,public,package.json,package-lock.json,next.config.*"
+          target: "~/${{ secrets.SSH_PROJECT }}"
+
+      - name: Restart on VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
           script: |
-            git config --global --add safe.directory /home/${{ secrets.SSH_USER }}/${{ secrets.SSH_PROJECT }}
-            cd ${{ secrets.SSH_PROJECT }} 
-            pm2 stop 0
-            git pull origin main 
-            npm install 
-            npm run build 
-            pm2 restart 0
+            cd ~/${{ secrets.SSH_PROJECT }}
+            npm ci --omit=dev
+            pm2 restart 0 || pm2 start npm --name "${{ secrets.SSH_PROJECT }}" -- start
