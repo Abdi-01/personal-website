@@ -21,7 +21,7 @@ jobs:
 
       - name: Install & Build
         run: |
-          npm ci
+          npm install
           npm run build
 
       - name: Copy build to VPS
@@ -41,5 +41,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd ~/${{ secrets.SSH_PROJECT }}
-            npm ci --omit=dev
+            npm install
             pm2 restart 0 || pm2 start npm --name "${{ secrets.SSH_PROJECT }}" -- start
