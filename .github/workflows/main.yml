@@ -23,6 +23,7 @@ jobs:
         run: |
           npm install
           npm run build
+           rm -rf .next/cache
 
       - name: Copy build to VPS
         uses: appleboy/scp-action@v0.1.7
